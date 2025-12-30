@@ -1,0 +1,19 @@
+#Inici ListForm
+
+<form method="post" action="" id="searchinvoices"> 
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-3 col-12">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text ">
+                        {% if fsc.type == 'C' %}
+                            {{trans('customer') }}:
+                        {% endif %}
+                        {% if fsc.type == 'P' %}
+                            {{trans('supplier') }}:
+                        {% endif %}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="{{trans('Nif, nombre o código') }}" name="cliente" value="{{ fsc.cliente }}">
+                </div>
+            </div>
