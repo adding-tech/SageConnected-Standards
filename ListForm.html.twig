@@ -1,19 +1,15 @@
 #Inici ListForm
+<hr class="my-0">
+<form method="post" action="" id="SearchClientesConta">  
+	 <div class="card-header">
+		<div class="row mb-1">
+			<div class="col-md-2 col-sm-12">
+				INPUT
+			</div>
+			
 
-<form method="post" action="" id="searchinvoices"> 
-    <div class="card-header">
-        <div class="row">
-            <div class="col-md-3 col-12">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text ">
-                        {% if fsc.type == 'C' %}
-                            {{trans('customer') }}:
-                        {% endif %}
-                        {% if fsc.type == 'P' %}
-                            {{trans('supplier') }}:
-                        {% endif %}</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="{{trans('Nif, nombre o código') }}" name="cliente" value="{{ fsc.cliente }}">
-                </div>
-            </div>
+            <div class="col-md-2 col-12 text-center">
+				<button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-search mr-2"></i>{{trans('search')}}</button>
+			</div>
+		</div>
+	</div>
